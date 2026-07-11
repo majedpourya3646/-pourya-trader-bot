@@ -38,7 +38,7 @@ async def signal(update: Update, context: ContextTypes.DEFAULT_TYPE):
         text += "\n\n------------------------\n\n"
 
     await update.message.reply_text(text)
-def main():
+def main(app.add_handler(CommandHandler("signal", signal))):
     if not BOT_TOKEN:
         raise ValueError("BOT_TOKEN environment variable not found.")
 

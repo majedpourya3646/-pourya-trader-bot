@@ -1,4 +1,5 @@
-import os
+from telegram_bot import build_signal
+from config import SYMBOLSimport os
 import logging
 from telegram import Update
 from telegram.ext import (

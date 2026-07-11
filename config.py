@@ -1,0 +1,22 @@
+import os
+
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+
+DEFAULT_TIMEFRAME = "15m"
+
+SYMBOLS = [
+    "BTCUSDT",
+    "ETHUSDT",
+    "BNBUSDT",
+    "SOLUSDT",
+    "XRPUSDT",
+    "DOGEUSDT",
+]
+
+CHECK_INTERVAL = 300
+
+RSI_BUY = 30
+RSI_SELL = 70
+
+EMA_FAST = 20
+EMA_SLOW = 50

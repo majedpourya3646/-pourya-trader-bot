@@ -27,7 +27,17 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def ping(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("✅ Bot Online")
 
+async def signal(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
+    text = ""
+
+    for symbol in SYMBOLS:
+
+        text += build_signal(symbol)
+
+        text += "\n\n------------------------\n\n"
+
+    await update.message.reply_text(text)
 def main():
     if not BOT_TOKEN:
         raise ValueError("BOT_TOKEN environment variable not found.")
